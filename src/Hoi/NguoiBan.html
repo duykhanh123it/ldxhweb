@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bán Hàng - InfinityCare</title>
+    <link rel="icon" href="../assets/img/favicon/favicon3.ico"/>
+    <link rel="stylesheet" href="../assets/css/BaseFooter.css">
+    <link rel="stylesheet" href="../assets/css/NguoiBan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>InfinityCare</h2>
+                <p>Quản lý bán hàng</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><i class="fas fa-chart-pie"></i> Thống kê</li>
+                <li><i class="fas fa-pills"></i> Sản phẩm</li>
+                <li><i class="fas fa-file-invoice"></i> Đơn hàng</li>
+                <li><i class="fas fa-user-md"></i> Khách hàng</li>
+                <li><i class="fas fa-warehouse"></i> Kho hàng</li>
+                <li><i class="fas fa-cog"></i> Cài đặt</li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Quick Stats -->
+            <div class="quick-stats">
+                <div class="stat-card primary">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <div class="stat-info">
+                        <h3>Doanh thu tháng</h3>
+                        <p>125,600,000đ</p>
+                        <span class="trend positive">+15.2% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                </div>
+
+                <div class="stat-card warning">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div class="stat-info">
+                        <h3>Đơn hàng mới</h3>
+                        <p>48</p>
+                        <span class="trend">Hôm nay</span>
+                    </div>
+                </div>
+
+                <div class="stat-card success">
+                    <i class="fas fa-box-open"></i>
+                    <div class="stat-info">
+                        <h3>Sản phẩm tồn</h3>
+                        <p>1,234</p>
+                        <span class="trend-negative">-5.3% <i class="fas fa-arrow-down"></i></span>
+                    </div>
+                </div>
+
+                <div class="stat-card info">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-info">
+                        <h3>Khách hàng mới</h3>
+                        <p>25</p>
+                        <span class="trend positive">+8.4% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="chart-section">
+                <div class="chart-container revenue">
+                    <h3>Biểu đồ doanh thu theo thời gian</h3>
+                    <canvas id="revenueTimeline"></canvas>
+                </div>
+                <div class="chart-container categories">
+                    <h3>Phân bố doanh thu theo danh mục</h3>
+                    <canvas id="categoryDistribution"></canvas>
+                </div>
+            </div>
+
+            <!-- Products Overview -->
+            <div class="products-overview">
+                <h3>Sản phẩm bán chạy</h3>
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th>Tên sản phẩm</th>
+                            <th>Danh mục</th>
+                            <th>Đã bán</th>
+                            <th>Còn lại</th>
+                            <th>Doanh thu</th>
+                            <th>Xu hướng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paracetamol 500mg</td>
+                            <td>Thuốc giảm đau</td>
+                            <td>856</td>
+                            <td>344</td>
+                            <td>25,680,000đ</td>
+                            <td><span class="trend-badge positive">Tăng</span></td>
+                        </tr>
+                        <tr>
+                            <td>Vitamin C 1000mg</td>
+                            <td>Vitamin</td>
+                            <td>654</td>
+                            <td>246</td>
+                            <td>19,620,000đ</td>
+                            <td><span class="trend-badge stable">Ổn định</span></td>
+                        </tr>
+                        <tr>
+                            <td>Vitamin C 1000mg</td>
+                            <td>Vitamin</td>
+                            <td>654</td>
+                            <td>246</td>
+                            <td>19,620,000đ</td>
+                            <td><span class="trend-badge stable">Ổn định</span></td>
+                        </tr>
+                        <tr>
+                            <td>Omega-3 Fish Oil</td>
+                            <td>Dầu cá</td>
+                            <td>432</td>
+                            <td>168</td>
+                            <td>12,600,000đ</td>
+                            <td><span class="trend-badge positive">Tăng</span></td>
+                        </tr>
+                        <tr>
+                            <td>Vitamin C 1000mg</td>
+                            <td>Vitamin</td>
+                            <td>654</td>
+                            <td>246</td>
+                            <td>19,620,000đ</td>
+                            <td><span class="trend-badge stable">Ổn định</span></td>
+                        </tr>
+                        <tr>
+                            <td>Omega-3 Fish Oil</td>
+                            <td>Dầu cá</td>
+                            <td>432</td>
+                            <td>168</td>
+                            <td>12,600,000đ</td>
+                            <td><span class="trend-badge positive">Tăng</span></td>
+                        </tr>
+                        <tr>
+                            <td>Canxi D3</td>
+                            <td>Khoáng chất</td>
+                            <td>578</td>
+                            <td>210</td>
+                            <td>15,960,000đ</td>
+                            <td><span class="trend-badge negative">Giảm</span></td>
+                        </tr>
+                        <tr>
+                            <td>Kẽm Gluconate</td>
+                            <td>Khoáng chất</td>
+                            <td>389</td>
+                            <td>142</td>
+                            <td>10,780,000đ</td>
+                            <td><span class="trend-badge stable">Ổn định</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sữa Ong Chúa</td>
+                            <td>Thực phẩm chức năng</td>
+                            <td>275</td>
+                            <td>95</td>
+                            <td>8,250,000đ</td>
+                            <td><span class="trend-badge positive">Tăng</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/DataFakeSales.js"></script>
+</body>
+</html>

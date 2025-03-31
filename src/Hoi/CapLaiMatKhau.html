@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cấp Lại Mật Khẩu</title>
+    <link rel="icon" href="../assets/img/favicon/favicon3.ico"/>
+    <link rel="icon" href="../assets/img/logo_InLib.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/DangNhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/CapLaiMatKhau.css">
+    <script src="../assets/js/CapLaiMatKhau.js"></script>
+</head>
+<body>
+    <div class="back-homepage">
+        <a href="../khanh/trangchu.html">
+            <i class="fas fa-angle-left"></i> Trang Chủ
+        </a>
+    </div>
+
+    <main>
+        <div class="login-container">
+            <div class="register">
+                <h1 class="register-title">Cấp Lại Mật Khẩu</h1>
+            </div>
+
+            <!-- Bước 1: Nhập Email -->
+            <div class="ResquestPassword-form step" id="step-1">
+                <form onsubmit="event.preventDefault(); validateEmail();">
+                    <div class="input-group">
+                        <label class="email-password" for="email">EMAIL</label>
+                        <input type="email" id="email" name="email" placeholder="Nhập email của bạn..." required>
+                    </div>
+                    <button class="submit-password" type="submit">Gửi mã xác nhận</button>
+                </form>
+            </div>
+
+            <!-- Bước 2: Nhập Mã Xác Nhận -->
+            <div class="ResquestPassword-form step" id="step-2" style="display: none;">
+                <form onsubmit="event.preventDefault(); validateCode();">
+                    <div class="input-group">
+                        <label class="email-password" for="code">MÃ XÁC NHẬN</label>
+                        <input type="text" id="code" name="code" placeholder="Nhập mã xác nhận..." required>
+                    </div>
+                    <button class="submit-password" type="submit">Xác nhận</button>
+                </form>
+            </div>
+
+            <!-- Bước 3: Nhập Mật Khẩu Mới -->
+            <div class="ResquestPassword-form step" id="step-3" style="display: none;">
+                <form onsubmit="validatePassword(event)">
+                    <div class="input-group">
+                        <label class="email-password" for="new-password">MẬT KHẨU MỚI</label>
+                        <input type="password" id="new-password" name="new-password" placeholder="Nhập mật khẩu mới..." required>
+                    </div>
+                    <div class="input-group">
+                        <label class="email-password" for="confirm-password">XÁC NHẬN MẬT KHẨU</label>
+                        <input type="password" id="confirm-password" name="confirm-password" placeholder="Nhập lại mật khẩu..." required>
+                    </div>
+                    <button class="submit-password" type="submit">Đặt lại mật khẩu</button>
+                </form>
+            </div>
+
+            <div class="request-password">
+                <a href="../hoi/DangNhap.html" class="back-to-login">
+                    Quay lại đăng nhập
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>CHĂM SÓC KHÁCH HÀNG</h3>
+                <ul>
+                    <li><a href="../linh/Lienhe.html">Trung Tâm Trợ Giúp</a></li>
+                    <li><a href="../hoi/HuongDanMuaHang.html">Hướng Dẫn Mua Hàng</a></li>
+                    <li><a href="../hoi/ChinhSachVanChuyen.html">Chính Sách Vận Chuyển</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>VỀ CHÚNG TÔI</h3>
+                <ul>
+                    <li><a href="../hoi/VeInfinityCare.html">Về InfinityCare</a></li>
+                    <li><a href="../hoi/ChinhSachThanhToan.html">Chính Sách Thanh Toán</a></li>
+                    <li><a href="../hoi/DieuKhoanChinhSach.html">Điều Khoản Chính Sách</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>THEO DÕI CHÚNG TÔI</h3>
+                <a href="https://www.facebook.com/people/Infinity-Care/61573928890310/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+            </div>
+            <div class="footer-column qr_code">
+                <h3>ĐI TỚI CỬA HÀNG</h3>
+                <img src="../assets/img/qr_code.png" alt="QR Code">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="../hoi/ChinhSachBaoMat.html">CHÍNH SÁCH BẢO MẬT</a> |
+            <a href="../hoi/QuyCheHoatDong.html">QUY CHẾ HOẠT ĐỘNG</a> |
+            <a href="../hoi/TraHangVaHoanTien.html">TRẢ HÀNG & HOÀN TIỀN</a> |
+            <a href="../hoi/SiteMap.html">SITEMAP</a>
+            <p>Được phát triển bởi Infinity Care Toàn Cầu</p>
+        </div>
+    </footer>
+</body>
+</html>

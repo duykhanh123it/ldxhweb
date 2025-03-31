@@ -1,0 +1,500 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    line-height: 1;
+    background-image: url(../img/background_DangNhap.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Hình nền cố định, không cuộn theo trang */
+}
+
+.back-homepage {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.back-homepage a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.back-homepage i {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.back-homepage:hover {
+    background: rgba(32, 94, 209, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.register-title {
+    font-size: 50px;
+    color: rgb(52, 145, 211);
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 20px 0;
+    white-space: nowrap;
+    margin-top: 0.5px;
+}
+
+
+.login-container {
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(20px); /* Tăng độ mờ của nền */
+    -webkit-backdrop-filter: blur(20px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Viền trong mờ */
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    width: 500px; /* Keep the width */
+    font-size: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+    margin-top: 15vh;
+
+}
+@keyframes glowBox {
+    0% {
+        box-shadow: 0px 5px 20px rgba(255, 94, 0, 0.6), 
+                    0px 0px 30px rgba(255, 94, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0px 10px 35px rgba(0, 102, 255, 0.7), 
+                    0px 0px 45px rgba(0, 102, 255, 0.6);
+    }
+}
+
+/* Viền sáng chạy xung quanh */
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 40px; /* Làm bo góc hoàn toàn */
+    padding: 5px;
+    background-size: 300% 300%;
+    animation: light-trail 4s linear infinite;
+    z-index: -1;
+    filter: blur(20px); /* Làm sáng mịn hơn */
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.email-password {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px; /* Bo góc */
+    border: 2px solid #ccc;
+    background: #fafafa;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-top: 1.5px;
+}
+
+input:focus {
+    border-color: #ff5722;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.5);
+}
+
+.input-group input {
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #ccc;
+    padding: 12px;
+    border-radius: 20px; /* Bo góc */
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    background-color: #f8f9fa;
+}
+
+.input-group input::placeholder {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.input-group input:focus::placeholder {
+    opacity: 0.5;
+}
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background: #fafafa;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid #ccc;
+    transition: background 0.3s;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fix-del-line {
+    text-decoration: none; /* Loại bỏ gạch chân cho <a> */
+}
+.login-btn a{
+    text-decoration: none;
+}
+.login-btn:hover {
+    background: #ffccbc;
+}
+
+.logo-login {
+    width: 25px;  /* Reduced from 35px */
+    height: 25px; /* Keep equal width/height for perfect circle */
+    border-radius: 50%;
+    border: 1.5px solid white;
+    margin-left: 10px;
+    padding: 4px; /* Reduced padding */
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.login-btn, .social-btn {
+    margin: 0.3px 0; /* Giảm khoảng cách giữa các nút */
+}
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+
+}
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: #fafafa;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.social-btn img {
+    width: 20px;
+    margin-left: 8px;
+}
+
+.support-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.support-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.support-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.button-resgister-apple-google{
+    text-decoration: none;
+    color: #333;
+}
+.social-btn:hover {
+    background: #ffccbc;
+}
+.request-password {
+    display: flex;
+    justify-content: center; /* Đổi thành center thay vì space-between */
+    gap: 30px; /* Khoảng cách giữa 2 link */
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.request-password a {
+    color: #666;
+    text-decoration: none;
+    font-size: 16px; /* Tăng font size từ 14px lên 16px */
+    font-weight: 500; /* Thêm độ đậm cho chữ */
+    transition: all 0.3s ease;
+}
+
+.request-password a:hover {
+    color: #007bff;
+    text-decoration: underline;
+    transform: translateY(-2px);
+}
+
+.call {
+    background: #f44336;
+    color: white;
+    font-size: 20px;
+}
+
+.messenger {
+    background: #0078FF;
+    color: white;
+    font-size: 20px;
+}
+
+.zalo img {
+    width: 30px;
+}
+
+footer {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    padding: 40px 0 20px;
+    width: 100%;
+    margin-top: 10%;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    color: #2d3436;
+    margin-bottom: 20px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #007bff;
+    border-radius: 2px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #636e72;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    color: #007bff;
+    transform: translateX(5px);
+}
+
+.footer-column.qr_code img {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.footer-column.qr_code img:hover {
+    transform: scale(1.05);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    background: rgba(0,0,0,0.03);
+}
+
+.footer-bottom a {
+    color: #636e72;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+    font-size: 16px;
+    position: relative;
+    padding: 5px 0;
+}
+
+.footer-bottom a:hover {
+    color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Style for the separator */
+.footer-bottom span.separator {
+    color: #636e72;
+    margin: 0 5px;
+}
+
+.footer-bottom p {
+    margin-top: 15px;
+    color: #636e72;
+    font-size: 16px;
+}
+
+/* Icon màu sắc cho Facebook */
+.footer-column a {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0056b3;
+    transition: all 0.3s ease;
+}
+
+.fab.fa-facebook {
+    color: #1877f2;
+    font-size: 28px; /* Tăng từ 24px lên 28px */
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+    transform: translateY(-1px);
+}
+
+.fab.fa-facebook:hover {
+    transform: scale(1.2) translateY(-1px);
+}
+
+.footer-column a {
+    font-size: 18px; /* Tăng kích thước chữ cho link Facebook */
+}
+
+@media screen and (max-width: 1440px) {
+    .register-title {
+        font-size: 45px;
+    }
+    .login-container {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .register-title {
+        font-size: 40px;
+    }
+    .login-container {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .register-title {
+        font-size: 35px;
+    }
+    .login-container {
+        width: 300px;
+    }
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .register-title {
+        font-size: 30px;
+    }
+    .login-container {
+        width: 90%;
+    }
+    .logo img {
+        width: 120px;
+    }
+    .support-buttons {
+        bottom: 10px;
+        right: 10px;
+    }
+    .support-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

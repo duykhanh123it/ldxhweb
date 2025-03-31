@@ -1,0 +1,343 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Thanh top-bar */
+.top-bar {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;    
+    cursor: pointer; /* Thêm hiệu ứng con trỏ */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 5px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(0, var(--primary-light), var(--primary-color));
+}
+.content img {
+    width: 100vw; /* Ảnh sẽ mở rộng toàn bộ chiều rộng của phần tử chứa nó */
+    max-width: 1500px; /* Giới hạn kích thước tối đa */
+    display: block;
+    margin: 0 auto; /* Căn giữa */
+}
+
+
+/* Logo */
+.logo {
+    flex-shrink: -100; /* Giữ logo cố định bên trái */
+    height: 100px;
+}
+
+.cart-icon {
+    color:#4ac4d4 ;
+    margin-top: 16px;
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+.logo:hover {
+    color: blue;
+    transition: color 0.3s ease;
+}
+
+/* Hộp tìm kiếm */
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 600px; /* Điều chỉnh độ rộng theo mong muốn */
+    background: #f1f1f1;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    margin-right: 236px;
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    background: transparent;
+}
+
+.search-button {
+    background: #4ac4d4;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    background-color: rgb(66, 198, 231);
+}
+
+.search-button:hover {
+    background: #ddd;
+}
+
+/* Căn giữa hộp tìm kiếm trong navbar  */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    height: 100px;
+}
+/* .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; Canh các phần tử về bên trái
+    gap: 20px; /* Tạo khoảng cách giữa logo, ô tìm kiếm và giỏ hàng */
+    /* background: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+
+.logo_img {
+    width: 200px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.navbar .logo {
+    margin-left: 0 ; /* Đẩy logo về bên trái */
+}
+
+.navbar .logo img {
+    width: 6060px; /* Chỉnh kích thước logo */
+    height: auto;
+}
+/* Giỏ hàng */
+.cart {
+    font-size: 20px;
+    cursor: pointer;
+}
+h1 {
+    margin-top: 30px; /* Điều chỉnh khoảng cách xuống */
+    
+}
+
+.breadcrumb{
+    font-size: 16px;
+    margin-top: 15px;
+    text-decoration: underline;
+}
+/* Breadcrumb */
+.breadcrumb span {
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease;
+    cursor: pointer;
+    
+}
+
+.breadcrumb span:hover {
+    color: red;
+}
+
+/* Bố cục chung */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content {
+    font-size: 20px;
+    width: 65%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    line-height: 1.6;
+
+}
+
+.content img {
+    width: 90%;
+    border-radius: 5px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 30%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    color: #900;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Hover hiệu ứng */
+.sidebar ul li:hover {
+    color: blue;
+    background-color: #f0f0f0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+footer {
+    background: #f8f8f8;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    font-size: 23px;
+}
+
+.footer-column h3 {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: red;
+}
+
+.footer-column img {
+    width: 80px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.app-links img {
+    width: 100px;
+    margin: 5px 0;
+}
+
+/* Footer bottom */
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background: #fff;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+}
+
+.footer-bottom a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-bottom a:hover {
+    color: red;
+}
+
+/* Nút tròn hỗ trợ */
+.support-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.support-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.support-btn:hover {
+    transform: scale(1.1);
+}
+
+.call {
+    background: red;
+    color: white;
+    font-size: 20px;
+}
+
+.messenger {
+    background: #0078FF;
+    color: white;
+    font-size: 20px;
+}
+
+.zalo img {
+    width: 30px;
+}
+.qr-code img {
+    width: 200px; /* Kích thước mong muốn */
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-column img {
+    width: 150px !important;
+    height: auto !important;
+}
+h1 {
+    font-size: 40px; /* Tăng kích thước chữ */
+    font-weight: bold; /* Làm đậm chữ */
+    text-align: center; /* Căn giữa */
+    margin-top: 20px; /* Thêm khoảng cách phía trên */
+    color: #333; /* Màu chữ, có thể chỉnh lại */
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Cá Nhân</title>
+    <link rel="icon" href="../assets/img/favicon/favicon3.ico"/>
+    <link rel="icon" href="../assets/img/logo_InCare.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/css/Trangcanhan.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="avatar"></div>
+                <h3>Khách Hàng</h3>
+                <p class="status">0 P-Xu Vàng</p>
+                <div class="rank-card">VÀNG</div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li>Thông tin cá nhân</li>
+                    <li>Số địa chỉ nhận hàng</li>
+                    <li>Lịch sử đơn hàng</li>
+                    <li>Mã giảm giá</li>
+                    <li>Lịch sử P-Xu Vàng</li>
+                    <li>Quy chế xếp hạng</li>
+                    <li>Thông báo của tôi</li>
+                    <li>Quản lý thanh toán</li>
+                    <li>Hỗ trợ gia đình</li>
+                    <li>Chỉ tiêu sức khỏe</li>
+                    <li>Công cụ sức khỏe</li>
+                    <li>Đơn thuốc của tôi</li>
+                    <li>Lịch sử tư vấn thuốc</li>
+                    <li>Kết quả xét nghiệm</li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <h2>Thông tin cá nhân</h2>
+            <div class="profile-container">
+                <div class="separator"></div>
+                <div class="profile-content">
+                    <!-- Bên trái (Avatar & cập nhật ảnh) -->
+                    <div class="profile-left">
+                        <div class="avatar-container">
+                            <div class="avatar-placeholder"></div>
+                            <button class="upload-btn">Cập nhật ảnh mới</button>
+                        </div>
+                    </div>
+                    <!-- Bên giữa (Form nhập liệu) -->
+                    <div class="profile-right">
+                        <form>
+                            <label for="name">Họ và tên</label>
+                            <input type="text" id="name" value="Khách hàng" disabled>
+            
+                            <label for="dob">Ngày sinh</label>
+                            <div class="date-picker-container">
+                                <input type="text" id="dob" placeholder="Ngày sinh" disabled>
+                                <span class="date-icon">📅</span>
+                            </div>
+            
+                            <label for="gender">Giới tính</label>
+                            <select id="gender" disabled>
+                                <option value="">Giới tính</option>
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
+                            </select>
+            
+                            <button class="save-btn" type="submit" disabled>Lưu thay đổi</button>
+                        </form>
+                    </div>
+            
+                    <!-- Bên phải (Thông tin liên hệ) -->
+                    <div class="profile-extra">
+                        <p><strong>Số điện thoại</strong> <a href="#">Cập nhật ></a></p>
+                        <p><strong>Email</strong> <a href="#">Cập nhật ></a></p>
+                        <p><strong>Mật khẩu</strong> <a href="#">Cập nhật ></a></p>
+                    </div>
+                </div>
+            </div>            
+        </main>
+    </div>
+</body>
+</html>
