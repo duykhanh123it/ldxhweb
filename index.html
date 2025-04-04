@@ -2495,6 +2495,14 @@
         document.querySelector('.support-btn.zalo').addEventListener('click', function() {
         const chatbox = document.querySelector('.chatbox-container');
         chatbox.classList.toggle('active');
+
+        // Thêm hiệu ứng khi đóng/mở
+        if (chatbox.classList.contains('active')) {
+            btn.style.transform = 'scale(1)';
+            btn.style.animation = 'none';
+        } else {
+            btn.style.animation = 'pulse 2s infinite';
+        }
     
         // Đóng chatbox khi click ra ngoài
         document.addEventListener('click', function closeChatbox(e) {
