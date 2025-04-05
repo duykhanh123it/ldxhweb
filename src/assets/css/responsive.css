@@ -1,3 +1,11 @@
+.chatbox-container {
+    width: 380px;
+    height: 70vh;
+    bottom: 100px;
+    right: 20px;
+    font-size: 40px;
+}
+
 /* Mobile & Tablet*/
 @media (max-width: 1023px) {
     :root {
@@ -49,12 +57,34 @@
     .catagory {
         margin-top: 10px;
     }   
+
+    .chatbox-container {
+        width: 350px;
+        height: 600px;
+        bottom: 90px;
+        z-index: 11; /* Đảm bảo hiển thị trên header */
+    }
+
+    .support-buttons {
+        z-index: 10;
+    }
 }
 
 /* Table */
 @media (min-width: 740px) and (max-width: 1023px) {
     .hide-on-table {
         display: none;
+    }
+
+    .chatbox-container {
+        width: 320px;
+        height: 70vh;
+        right: 15px;
+    }
+    
+    .support-buttons {
+        right: 15px;
+        bottom: 25px;
     }
 
     .header .grid.wide {
@@ -75,6 +105,29 @@
 @media (max-width: 739px) {
     .hide-on-mobile {
         display: none;
+    }
+
+    .chatbox-container {
+        width: 50%;
+        height: 70vh;
+        max-height: 500px;
+        bottom: 80px;
+        right: 0;
+        border-radius: 0;
+    }
+    
+    .support-buttons {
+        right: 10px;
+        bottom: 20px;
+    }
+    
+    .support-btn {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .support-btn.zalo img {
+        width: 25px;
     }
 
     .header {

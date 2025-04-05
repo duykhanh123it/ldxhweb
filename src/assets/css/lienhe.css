@@ -402,7 +402,7 @@ h1 {
 }
 
 .support-btn.zalo img {
-    width: 60px;
+    width: 40px;
     object-fit: cover; /* Giữ tỷ lệ ảnh và fill đầy khối */
     object-position: center;
     transition: transform 0.1s ease; /* Thêm hiệu ứng phóng to khi hover */
