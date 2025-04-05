@@ -531,6 +531,10 @@
     user-select: none;
 }
 
+.logo-img {
+    width: 170px;
+}
+
 .header__search {
     display: flex;
     align-items: center;
